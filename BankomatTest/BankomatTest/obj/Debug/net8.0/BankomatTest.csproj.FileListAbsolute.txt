@@ -206,3 +206,4 @@
 /Users/user/mai24ma/Test, integration, leverans/Bankomat/BankomatTest/BankomatTest/obj/Debug/net8.0/BankomatTest.pdb
 /Users/user/mai24ma/Test, integration, leverans/Bankomat/BankomatTest/BankomatTest/obj/Debug/net8.0/BankomatTest.genruntimeconfig.cache
 /Users/user/mai24ma/Test, integration, leverans/Bankomat/BankomatTest/BankomatTest/obj/Debug/net8.0/ref/BankomatTest.dll
+/Users/user/mai24ma/Test, integration, leverans/Bankomat/BankomatTest/BankomatTest/obj/Debug/net8.0/BankomatTest.sourcelink.json

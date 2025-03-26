@@ -179,7 +179,9 @@ public class BankomatTest
         
         // test
         bool result = bankomat.withdraw(5000);
-        Assert.True(result);
+        
+        Assert.False(result);
+        Assert.Equal("You are not authenticated", bankomat.getMessage());
     }
 }
 

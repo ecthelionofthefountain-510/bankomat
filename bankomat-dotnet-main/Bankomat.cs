@@ -73,7 +73,12 @@ public class Bankomat {
     }
 
     public bool withdraw(int amount){
-        if(pin == "0123" &&  amount > 0 && amount <= machineBalance && amount <= card.account.getBalance()){
+        if (!isAuthenticated)
+        {
+            msgs.Add("You are not authenticated");
+            return false;
+        }
+        if(amount > 0 && amount <= machineBalance && amount <= card.account.getBalance()){
             machineBalance -= amount;
             card.account.withdraw(amount);
             msgs.Add("Withdrawing " + amount);
