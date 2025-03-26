@@ -7,6 +7,6 @@ public class Card {
 
     public Card(Account account){
         this.account = account;
-    }
+    } 
 
 }

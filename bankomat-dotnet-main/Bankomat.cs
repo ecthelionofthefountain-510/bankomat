@@ -5,6 +5,7 @@ namespace banko;
 public class Bankomat {
 
     bool cardInserted = false; 
+    bool isAuthenticated = false;
     Card card;
     int amount;
     int machineBalance = 11000;
@@ -52,10 +53,12 @@ public class Bankomat {
         if(card.pin == pin)
         {
             failedPinAttempts = 0;
+            isAuthenticated = true;
             msgs.Add("Correct pin");
             return true;            
         }else{
             failedPinAttempts++;
+            isAuthenticated = false;
             if (failedPinAttempts >= 3)
             {
                 cardInserted = false;
@@ -70,7 +73,7 @@ public class Bankomat {
     }
 
     public bool withdraw(int amount){
-        if(card.pin == "0123" &&  amount > 0 && amount <= machineBalance && amount <= card.account.getBalance()){
+        if(pin == "0123" &&  amount > 0 && amount <= machineBalance && amount <= card.account.getBalance()){
             machineBalance -= amount;
             card.account.withdraw(amount);
             msgs.Add("Withdrawing " + amount);
